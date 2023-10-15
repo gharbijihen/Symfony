@@ -1,5 +1,35 @@
+<<<<<<< HEAD
 <h2>AddAuthor</h2>
 {{ form(formAuthor) }}
 <form action="" method="">
 
 </form>
+=======
+{# templates/author/add_author.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un auteur{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un auteur</h1>
+
+    {{ form_start(form) }}
+
+    <div class="form-group">
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.nom) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.biographie) }}
+        {{ form_widget(form.biographie, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.biographie) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+
+    {{ form_end(form) }}
+{% endblock %}
+>>>>>>> ebbd357 ('s4')
